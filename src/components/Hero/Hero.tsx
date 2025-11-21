@@ -1,9 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface HeroProps {
   title: React.ReactNode;
   subtitle?: React.ReactNode;
+  backgroundImage?: string;
   disabled?: boolean;
 }
 
@@ -23,11 +24,11 @@ const HeroWrapper = styled.div<{ $disabled?: boolean }>`
     #f8fafc 90%
   );
   opacity: ${({ $disabled }) => ($disabled ? 0.5 : 1)};
-  pointer-events: ${({ $disabled }) => ($disabled ? 'none' : 'auto')};
+  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
   transition: opacity 0.3s ease;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 500px;
     height: 500px;
@@ -40,7 +41,7 @@ const HeroWrapper = styled.div<{ $disabled?: boolean }>`
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 500px;
     height: 500px;

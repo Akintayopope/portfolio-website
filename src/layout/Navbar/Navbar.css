@@ -1,0 +1,113 @@
+/* MAIN NAV WRAPPER */
+.navbar {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between; /* Left - Center - Right */
+  align-items: center;
+
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8b5cf6, #d946ef);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.logo-text {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 20px;
+}
+
+/* LINKS */
+.nav-links a {
+  position: relative;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.25s ease, transform 0.15s ease;
+}
+
+/* Hover */
+.nav-links a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Click */
+.nav-links a:active {
+  transform: scale(0.92);
+}
+
+/* Underline Animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #8b5cf6, #d946ef);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active section */
+.nav-links a.active {
+  color: #fff;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-connect {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.nav-connect:hover {
+  transform: translateY(-2px);
+}
+
+.nav-connect:active {
+  transform: scale(0.93);
+}
