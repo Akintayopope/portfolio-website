@@ -3,4 +3,5 @@ export interface ButtonProps {
   bg?: string;
   disabled?: boolean;
   onClick?: () => void;
+  variant?: "primary" | "secondary" | "gradient";
 }
