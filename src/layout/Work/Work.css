@@ -1,0 +1,120 @@
+.work {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.work-title {
+  margin-bottom: 0.5rem;
+}
+
+.work-desc {
+  margin-bottom: 3rem;
+  max-width: 700px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.work-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.75rem 0.75rem !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Make all cards equal height and push button down */
+.work-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+/* Push button to bottom */
+.project-button {
+  margin-top: auto !important;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.work .project-title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  color: #e2e8f0 !important;
+}
+
+/* DESCRIPTION */
+.work .project-desc {
+  margin-bottom: 0.75rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.5 !important;
+  font-size: 0.9rem !important;
+}
+
+/* TAG LIST */
+.work .tech-list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  padding: 0 !important;
+  margin: 0.75rem 0 1rem 0 !important;
+  list-style: none !important;
+}
+
+/* TAG */
+.work .tech-list li {
+  font-size: 0.65rem !important;
+  padding: 0.15rem 0.55rem !important;
+  border-radius: 9999px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.work-card img {
+  width: 300px;
+  height: 200px; /* for small cards */
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity 0.2s;
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+}
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.filter-btn.active {
+  background: linear-gradient(90deg, #8b5cf6, #d946ef);
+  color: white;
+}
+
+.button-wrapper {
+  margin-top: auto; /* forces button to the bottom of the card */
+}
