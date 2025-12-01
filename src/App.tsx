@@ -4,6 +4,7 @@ import Navbar from "./layout/Navbar/Navbar";
 import Hero from "./layout/Hero/Hero";
 import Work from "./layout/Work/Work";
 import Skills from "./layout/Skills";
+import Resources from "./layout/Resources";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Work />
       <Skills />
+      <Resources />
       {/* Background Animation */}
       <div className="bg-blobs">
         <div className="blob blob-purple"></div>

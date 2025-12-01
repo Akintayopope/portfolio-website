@@ -1,0 +1,69 @@
+/* SECTION */
+.resources {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.resources-title {
+  color: #e2e8f0 !important;
+  margin-bottom: 0.5rem;
+}
+
+.resources-desc {
+  color: #94a3b8 !important;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+/* HORIZONTAL LIST STYLE */
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ROW CARD — NEW STYLE */
+.resource-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 5px solid #8b5cf6; /* accent */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* RIGHT CONTENT */
+.resource-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TITLE */
+.resource-title {
+  color: #f8fafc !important;
+  margin-bottom: 0.25rem;
+}
+
+/* SUMMARY */
+.resource-summary {
+  color: #94a3b8 !important;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  max-width: 600px;
+}
+
+/* BUTTON */
+.resource-link-btn {
+  width: fit-content;
+  margin-top: auto;
+}
