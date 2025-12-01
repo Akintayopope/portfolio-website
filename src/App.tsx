@@ -5,6 +5,8 @@ import Hero from "./layout/Hero/Hero";
 import Work from "./layout/Work/Work";
 import Skills from "./layout/Skills";
 import Resources from "./layout/Resources";
+import DevSetup from "./layout/DevSetup";
+import Contact from "./layout/Contact";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Work />
       <Skills />
       <Resources />
+      <DevSetup />
+      <Contact />
       {/* Background Animation */}
       <div className="bg-blobs">
         <div className="blob blob-purple"></div>
