@@ -1,0 +1,66 @@
+/* SECTION WRAPPER */
+.skills {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+/* TITLE */
+.skills-title {
+  color: #e2e8f0 !important;
+  margin-bottom: 0.5rem;
+}
+
+/* DESCRIPTION */
+.skills-desc {
+  max-width: 700px;
+  margin-bottom: 3rem;
+  color: #94a3b8 !important;
+}
+
+/* BLOCK WRAPPER */
+.skills-block {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(
+    140deg,
+    rgba(139, 92, 246, 0.04),
+    rgba(14, 165, 233, 0.03)
+  );
+}
+
+.skills-heading {
+  margin-bottom: 1rem;
+  color: #f1f5f9 !important;
+  border-left: 3px solid #8b5cf6;
+  padding-left: 0.5rem;
+}
+
+/* TAGS CONTAINER */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* GLASS TAG STYLE */
+.skill-tag {
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 9999px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+
+  backdrop-filter: blur(12px);
+  transition: 0.25s ease;
+}
+
+/* HOVER INTERACTION */
+.skill-tag:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}

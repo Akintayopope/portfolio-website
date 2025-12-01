@@ -3,12 +3,15 @@ import "./index.css";
 import Navbar from "./layout/Navbar/Navbar";
 import Hero from "./layout/Hero/Hero";
 import Work from "./layout/Work/Work";
+import Skills from "./layout/Skills";
+
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
       <Work />
+      <Skills />
       {/* Background Animation */}
       <div className="bg-blobs">
         <div className="blob blob-purple"></div>
