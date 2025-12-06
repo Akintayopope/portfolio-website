@@ -2,8 +2,8 @@ import React from "react";
 import "./index.css";
 import Navbar from "./layout/Navbar/Navbar";
 import Hero from "./layout/Hero/Hero";
-// import Work from "./layout/Work/Work";
-// import Skills from "./layout/Skills";
+import Work from "./layout/Work/Work";
+import Skills from "./layout/Skills";
 // import Resources from "./layout/Resources";
 // import DevSetup from "./layout/DevSetup";
 // import Contact from "./layout/Contact";
@@ -13,9 +13,9 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      {/* <Work />
+      <Work />
       <Skills />
-      <Resources />
+      {/* <Resources />
       <DevSetup />
       <Contact /> */}
       {/* Background Animation */}
