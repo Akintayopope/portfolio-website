@@ -5,4 +5,5 @@ export interface ImageProps {
   height?: string;
   rounded?: boolean;
   disabled?: boolean;
+  className?: string; // ✅ ADD THIS
 }

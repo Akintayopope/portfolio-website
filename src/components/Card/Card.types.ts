@@ -1,4 +1,3 @@
-import type React from 'react';
 export interface CardProps {
   title?: string;
   subtitle?: string;
@@ -6,4 +5,6 @@ export interface CardProps {
   children?: React.ReactNode;
   disabled?: boolean;
   onClick?: () => void;
+  className?: string;
+  variant?: "light" | "glass"; // <-- added
 }
