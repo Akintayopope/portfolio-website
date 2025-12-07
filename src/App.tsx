@@ -4,7 +4,7 @@ import Navbar from "./layout/Navbar/Navbar";
 import Hero from "./layout/Hero/Hero";
 import Work from "./layout/Work/Work";
 import Skills from "./layout/Skills";
-// import Resources from "./layout/Resources";
+import Resources from "./layout/Resources";
 // import DevSetup from "./layout/DevSetup";
 // import Contact from "./layout/Contact";
 
@@ -15,16 +15,15 @@ function App() {
       <Hero />
       <Work />
       <Skills />
-      {/* <Resources />
-      <DevSetup />
-      <Contact /> */}
-      {/* Background Animation */}
+      <Resources />
+      {/* <DevSetup />
+      <Contact />  */}
+
       <div className="bg-blobs">
         <div className="blob blob-purple"></div>
         <div className="blob blob-blue"></div>
         <div className="blob blob-emerald"></div>
       </div>
-
       <main style={{ position: "relative", zIndex: 2 }}></main>
     </>
   );
