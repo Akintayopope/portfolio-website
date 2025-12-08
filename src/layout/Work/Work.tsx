@@ -67,7 +67,7 @@ const projects = [
 
 export default function Work() {
   return (
-    <section className="work">
+    <section id="work" className="work">
       <Typography size="xl" weight="bold" className="work-title">
         My Projects
       </Typography>

@@ -7,7 +7,7 @@ import { MapPin, GraduationCap, Briefcase, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <div className="page-wrapper">
+    <div id="home" className="page-wrapper">
       {/* Background Circles */}
       <div className="bg-animation">
         <div className="bg-circle circle-1" />

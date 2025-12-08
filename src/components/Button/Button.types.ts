@@ -1,7 +1,9 @@
-export interface ButtonProps {
-  label?: string;
-  bg?: string;
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  label?: string | React.ReactNode;
+  icon?: React.ReactNode;
   disabled?: boolean;
-  onClick?: () => void;
   variant?: "primary" | "secondary" | "gradient";
 }
+
+export {};

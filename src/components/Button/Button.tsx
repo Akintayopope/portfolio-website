@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string;
+  label?: string | React.ReactNode;
+  icon?: React.ReactNode;
   disabled?: boolean;
   variant?: "primary" | "secondary" | "gradient";
 }
@@ -16,6 +17,10 @@ const StyledButton = styled.button<{
   border: none;
   font-size: 16px;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
   transition: all 0.2s ease-in-out;
 
@@ -60,8 +65,10 @@ const StyledButton = styled.button<{
 
 export const Button: React.FC<ButtonProps> = ({
   label,
+  icon,
   disabled = false,
   variant = "primary",
+  children,
   ...rest
 }) => {
   return (
@@ -71,7 +78,17 @@ export const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       {...rest}
     >
-      {label}
+      {/* If children exist, render children */}
+      {children ? (
+        children
+      ) : (
+        <>
+          {/* Default label */}
+          {label}
+          {/* Optional icon */}
+          {icon && <span>{icon}</span>}
+        </>
+      )}
     </StyledButton>
   );
 };

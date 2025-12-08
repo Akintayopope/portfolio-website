@@ -7,4 +7,5 @@ export interface DropdownProps {
   disabled?: boolean;
   id?: string;
   mobile?: boolean;
+  onItemClick?: () => void;
 }

@@ -20,6 +20,12 @@ const StyledH3 = styled.h3`
   line-height: 1.4;
 `;
 
+const StyledH4 = styled.h4`
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.45;
+`;
+
 export const Heading: React.FC<HeadingProps> = ({
   children,
   level = 1,
@@ -32,6 +38,8 @@ export const Heading: React.FC<HeadingProps> = ({
       return <StyledH2 className={className}>{children}</StyledH2>;
     case 3:
       return <StyledH3 className={className}>{children}</StyledH3>;
+    case 4:
+      return <StyledH4 className={className}>{children}</StyledH4>;
     default:
       return <StyledH1 className={className}>{children}</StyledH1>;
   }
