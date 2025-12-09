@@ -6,12 +6,21 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;
   disabled?: boolean;
   variant?: "primary" | "secondary" | "gradient";
+
+  // NEW anchor support
+  href?: string;
+  download?: string;
+  target?: string;
+  rel?: string;
 }
 
-const StyledButton = styled.button<{
+const StyledButton = styled.a<{
   $disabled?: boolean;
   $variant?: string;
 }>`
+  text-decoration: none; /* remove underline */
+  -webkit-tap-highlight-color: transparent;
+
   padding: 10px 16px;
   border-radius: 8px;
   border: none;
@@ -68,24 +77,48 @@ export const Button: React.FC<ButtonProps> = ({
   icon,
   disabled = false,
   variant = "primary",
+  href,
+  download,
+  target,
+  rel,
   children,
   ...rest
 }) => {
+  const sharedProps = {
+    $disabled: disabled,
+    $variant: variant,
+  };
+
+  // 👉 Render <a> when href exists
+  if (href) {
+    return (
+      <StyledButton
+        {...sharedProps}
+        href={href}
+        download={download}
+        target={target}
+        rel={rel}
+      >
+        {children ? (
+          children
+        ) : (
+          <>
+            {label}
+            {icon && <span>{icon}</span>}
+          </>
+        )}
+      </StyledButton>
+    );
+  }
+
+  // 👉 Otherwise render <button>
   return (
-    <StyledButton
-      $disabled={disabled}
-      $variant={variant}
-      disabled={disabled}
-      {...rest}
-    >
-      {/* If children exist, render children */}
+    <StyledButton {...sharedProps} as="button" disabled={disabled} {...rest}>
       {children ? (
         children
       ) : (
         <>
-          {/* Default label */}
           {label}
-          {/* Optional icon */}
           {icon && <span>{icon}</span>}
         </>
       )}

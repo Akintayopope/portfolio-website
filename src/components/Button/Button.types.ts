@@ -4,6 +4,10 @@ export interface ButtonProps
   icon?: React.ReactNode;
   disabled?: boolean;
   variant?: "primary" | "secondary" | "gradient";
-}
 
-export {};
+  // NEW: allow anchor usage
+  href?: string;
+  download?: string;
+  target?: string;
+  rel?: string;
+}
