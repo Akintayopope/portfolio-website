@@ -26,6 +26,8 @@ Run:
 
 docker build -t popoola_akintayo_coding_assignment14 .
 
+This uses a multi-stage Dockerfile that compiles the React application in production mode using node:18-alpine and serves the final build using serve.
+
 ## Run the Docker Container
 
 ### The running container must also use the required naming convention:
@@ -34,6 +36,8 @@ docker run -d \
  --name popoola_akintayo_coding_assignment14 \
  -p 5575:5575 \
  popoola_akintayo_coding_assignment14
+
+This starts the container and exposes the site on your machine.
 
 ## Access the Application
 
@@ -53,94 +57,126 @@ docker rm popoola_akintayo_coding_assignment14
 
 ## Project Sections
 
+The portfolio includes the following sections as required:
+
 ### Basic Information
 
-Includes introductory hero content such as:
+The introductory area includes:
 
-Name
+Name and professional title
 
-Role
+Profile image
 
-Personal introduction
+Short tagline and summary of expertise
 
-Summary statement
+Primary CTAs (e.g., View Projects, Contact)
 
 ## Work
 
-Showcases featured projects with:
+A curated selection of professional and academic projects, each containing:
 
-Titles
+Project title
 
-Descriptions
+Description
 
-Images
+Image
 
-Tech stacks
+Tech list
 
-Direct GitHub links
+Direct GitHub link
+
+Category-based filtering using custom Radio components
 
 ## Skills
 
-Organized into categories including:
+Organized into categories such as:
 
 Languages
 
 Frameworks
 
-Tools
+Tools and technologies
 
-Development technologies
+Each skill item uses custom Card, Typography, and Label components for consistent UI.
 
 ## Resources
 
-A curated set of learning resources featuring:
+A curated list of developer learning resources including:
 
 Titles
 
-Icons or images
+Icons
 
-Short summaries
+Summaries
 
 External links
 
+Displayed using custom Card and Typography components.
+
 ## Developer Setup
 
-Outlines the development environment used:
+A breakdown of the personal development environment, including:
 
-VS Code extensions & theme
+VS Code extensions and theme
 
-Terminal configuration (e.g., Zsh / Oh My Zsh)
+Preferred terminal and shell setup
 
-Preferred programming font with ligatures
+Coding font (with ligatures)
 
 ## Contact
 
-A dedicated Contact page
+A dedicated contact page featuring:
 
-Professionally styled UI consistent with your component system
+Professional glass-style information cards
 
-Social and external links
+Icons indicating location, email, status, and response time
 
-Accessible and responsive design
+A functional contact form
 
-Integration of custom components and icons
+Custom Button, Typography, Heading, and Card components
+
+Accessible and responsive layout
 
 ## Technology Stack
 
 This project uses:
 
+### Frontend
+
 React (Create React App)
 
 TypeScript
 
-Custom Component Library
+Custom Component Library (Buttons, Cards, Labels, Typography, Radio, Image)
 
-CSS & Styled Components
+CSS + Styled Components
 
 Lucide React Icons
 
-Docker Multi-Stage Build using:
+### Testing
 
-node:18-alpine for building
+Jest
 
-serve for hosting the production build
+React Testing Library
+
+100% passing test suite
+
+Husky pre-commit hooks enforce tests before commit
+
+### Tooling / Pipeline
+
+Prettier & ESLint
+
+GitHub Actions (CI pipeline for lint, format, and test)
+
+Husky pre-commit checks
+
+### Docker
+
+Multi-stage build using:
+
+node:18-alpine (build stage)
+
+serve (run stage)
+
+Exposed on port 5575
