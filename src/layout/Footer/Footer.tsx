@@ -1,5 +1,5 @@
-import "./Footer.css";
-import { Github, Linkedin, Mail, MapPin, Briefcase } from "lucide-react";
+import './Footer.css';
+import { Github, Linkedin, Mail, MapPin, Briefcase } from 'lucide-react';
 
 export default function Footer() {
   return (

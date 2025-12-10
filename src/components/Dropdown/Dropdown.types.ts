@@ -1,5 +1,5 @@
 export interface DropdownProps {
-  type?: "form" | "menu";
+  type?: 'form' | 'menu';
   label?: string;
   options?: string[];
   children?: React.ReactNode;

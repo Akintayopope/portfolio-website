@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { HeadingProps } from "./Heading.types";
+import React from 'react';
+import styled from 'styled-components';
+import { HeadingProps } from './Heading.types';
 
 const StyledH1 = styled.h1`
   font-size: 3rem;

@@ -1,9 +1,9 @@
-import { useState } from "react";
-import "./DevSetup.css";
+import { useState } from 'react';
+import './DevSetup.css';
 
-import { Heading } from "../../components/Heading/Heading";
-import { Typography } from "../../components/Typography/Typography";
-import { Card } from "../../components/Card/Card";
+import { Heading } from '../../components/Heading/Heading';
+import { Typography } from '../../components/Typography/Typography';
+import { Card } from '../../components/Card/Card';
 
 import {
   Code2,
@@ -13,11 +13,11 @@ import {
   Palette,
   Settings,
   Zap,
-} from "lucide-react";
+} from 'lucide-react';
 
 export default function DevSetup() {
-  const [activeTab, setActiveTab] = useState<"vscode" | "terminal" | "font">(
-    "vscode"
+  const [activeTab, setActiveTab] = useState<'vscode' | 'terminal' | 'font'>(
+    'vscode'
   );
 
   return (
@@ -44,8 +44,8 @@ export default function DevSetup() {
         {/* ====================== TABS ====================== */}
         <div className="setup-tabs">
           <button
-            className={`tab-button ${activeTab === "vscode" ? "active" : ""}`}
-            onClick={() => setActiveTab("vscode")}
+            className={`tab-button ${activeTab === 'vscode' ? 'active' : ''}`}
+            onClick={() => setActiveTab('vscode')}
           >
             <span className="tab-icon">
               <Code2 size={18} />
@@ -54,8 +54,8 @@ export default function DevSetup() {
           </button>
 
           <button
-            className={`tab-button ${activeTab === "terminal" ? "active" : ""}`}
-            onClick={() => setActiveTab("terminal")}
+            className={`tab-button ${activeTab === 'terminal' ? 'active' : ''}`}
+            onClick={() => setActiveTab('terminal')}
           >
             <span className="tab-icon">
               <Terminal size={18} />
@@ -64,8 +64,8 @@ export default function DevSetup() {
           </button>
 
           <button
-            className={`tab-button ${activeTab === "font" ? "active" : ""}`}
-            onClick={() => setActiveTab("font")}
+            className={`tab-button ${activeTab === 'font' ? 'active' : ''}`}
+            onClick={() => setActiveTab('font')}
           >
             <span className="tab-icon">
               <Type size={18} />
@@ -80,7 +80,7 @@ export default function DevSetup() {
         <div className="tab-content-wrapper">
           {/* ================== VS CODE TAB ================== */}
           <div
-            className={`tab-content ${activeTab === "vscode" ? "active" : ""}`}
+            className={`tab-content ${activeTab === 'vscode' ? 'active' : ''}`}
           >
             <div className="vscode-bento">
               {/* EXTENSIONS */}
@@ -95,14 +95,14 @@ export default function DevSetup() {
                 <div className="bento-content">
                   <div className="extensions-grid">
                     {[
-                      "ES7+ React/Redux/JS Snippets",
-                      "Prettier – Code formatter",
-                      "ESLint",
-                      "GitLens — Git supercharged",
-                      "Auto Rename Tag",
-                      "Live Server",
-                      "Path Intellisense",
-                      "Material Icon Theme",
+                      'ES7+ React/Redux/JS Snippets',
+                      'Prettier – Code formatter',
+                      'ESLint',
+                      'GitLens — Git supercharged',
+                      'Auto Rename Tag',
+                      'Live Server',
+                      'Path Intellisense',
+                      'Material Icon Theme',
                     ].map((label, index) => (
                       <div key={index} className="extension-chip">
                         <div className="chip-icon">
@@ -125,7 +125,7 @@ export default function DevSetup() {
                 </div>
 
                 <div className="bento-content">
-                  <p style={{ marginBottom: "1rem" }}>One Dark Pro</p>
+                  <p style={{ marginBottom: '1rem' }}>One Dark Pro</p>
 
                   <div className="code-preview">
                     <div className="code-line">
@@ -181,7 +181,7 @@ export default function DevSetup() {
           {/* ================== TERMINAL TAB ================== */}
           <div
             className={`tab-content ${
-              activeTab === "terminal" ? "active" : ""
+              activeTab === 'terminal' ? 'active' : ''
             }`}
           >
             <div className="terminal-split">
@@ -197,10 +197,10 @@ export default function DevSetup() {
                 <div className="terminal-body">
                   <ul className="info-list">
                     {[
-                      ["Shell", "Zsh (Z Shell)"],
-                      ["Framework", "Oh My Zsh"],
-                      ["Theme", "Dracula"],
-                      ["Font", "Fira Code 14px"],
+                      ['Shell', 'Zsh (Z Shell)'],
+                      ['Framework', 'Oh My Zsh'],
+                      ['Theme', 'Dracula'],
+                      ['Font', 'Fira Code 14px'],
                     ].map(([label, value], index) => (
                       <li className="info-item" key={index}>
                         <div className="info-item-label">{label}</div>
@@ -224,7 +224,7 @@ export default function DevSetup() {
 
                 <div className="terminal-body">
                   <div className="terminal-window">
-                    {["npm run dev", "git status", "docker ps"].map(
+                    {['npm run dev', 'git status', 'docker ps'].map(
                       (cmd, index) => (
                         <div className="terminal-cmd" key={index}>
                           <span className="terminal-prompt">➜</span>
@@ -237,12 +237,12 @@ export default function DevSetup() {
 
                   <div className="plugins-wrap">
                     {[
-                      "git",
-                      "node",
-                      "npm",
-                      "docker",
-                      "zsh-autosuggestions",
-                      "zsh-syntax-highlighting",
+                      'git',
+                      'node',
+                      'npm',
+                      'docker',
+                      'zsh-autosuggestions',
+                      'zsh-syntax-highlighting',
                     ].map((plugin, index) => (
                       <span className="plugin-tag" key={index}>
                         {plugin}
@@ -256,7 +256,7 @@ export default function DevSetup() {
 
           {/* ================== FONT TAB ================== */}
           <div
-            className={`tab-content ${activeTab === "font" ? "active" : ""}`}
+            className={`tab-content ${activeTab === 'font' ? 'active' : ''}`}
             id="tab-font" // Add this if you want
           >
             <div className="font-showcase">
@@ -268,10 +268,10 @@ export default function DevSetup() {
 
                 <div className="font-features-grid">
                   {[
-                    ["Font Size", "14px"],
-                    ["Line Height", "1.6"],
-                    ["Weight", "Regular"],
-                    ["Ligatures", "Enabled ✓"],
+                    ['Font Size', '14px'],
+                    ['Line Height', '1.6'],
+                    ['Weight', 'Regular'],
+                    ['Ligatures', 'Enabled ✓'],
                   ].map(([label, value], index) => (
                     <div className="feature-card" key={index}>
                       <div className="feature-label">{label}</div>
@@ -287,7 +287,7 @@ export default function DevSetup() {
                 </div>
 
                 <div className="ligature-examples">
-                  {["!=", "===", "=>", ">=", "<=", "->", "&&", "||"].map(
+                  {['!=', '===', '=>', '>=', '<=', '->', '&&', '||'].map(
                     (item, index) => (
                       <span className="ligature-item" key={index}>
                         {item}

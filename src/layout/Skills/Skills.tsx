@@ -1,7 +1,7 @@
-import "./Skills.css";
-import { Typography } from "../../components/Typography/Typography";
-import { Card } from "../../components/Card/Card";
-import SkillItem from "./SkillItem";
+import './Skills.css';
+import { Typography } from '../../components/Typography/Typography';
+import { Card } from '../../components/Card/Card';
+import SkillItem from './SkillItem';
 
 export default function Skills() {
   return (

@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string | React.ReactNode;
@@ -7,8 +7,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
 
   // Existing + new
-  variant?: "primary" | "secondary" | "gradient" | "circle";
-  size?: "sm" | "md" | "lg";
+  variant?: 'primary' | 'secondary' | 'gradient' | 'circle';
+  size?: 'sm' | 'md' | 'lg';
 
   // Anchor support
   href?: string;
@@ -36,7 +36,7 @@ const StyledButton = styled.a<{
   justify-content: center;
   gap: 0.5rem;
 
-  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'pointer')};
   transition: all 0.2s ease-in-out;
 
   ${({ $variant, $disabled }) => {
@@ -48,14 +48,14 @@ const StyledButton = styled.a<{
     }
 
     switch ($variant) {
-      case "gradient":
+      case 'gradient':
         return `
           background: linear-gradient(90deg, #a78bfa, #e879f9, #f472b6);
           color: white;
           &:hover { opacity: 0.9; }
         `;
 
-      case "secondary":
+      case 'secondary':
         return `
           background: transparent;
           border: 1px solid rgba(255,255,255,0.3);
@@ -66,7 +66,7 @@ const StyledButton = styled.a<{
       /* -------------------------------
          NEW CIRCLE VARIANT FOR ICON BUTTONS
       -------------------------------- */
-      case "circle":
+      case 'circle':
         return `
           width: 52px;
           height: 52px;
@@ -94,7 +94,7 @@ const StyledButton = styled.a<{
         `;
 
       // DEFAULT PRIMARY BUTTON
-      case "primary":
+      case 'primary':
       default:
         return `
           background: #2563eb;
@@ -108,7 +108,7 @@ const StyledButton = styled.a<{
      SIZE SUPPORT (optional override)
   -------------------------------- */
   ${({ $size }) =>
-    $size === "lg" &&
+    $size === 'lg' &&
     `
       width: 52px;
       height: 52px;
@@ -116,7 +116,7 @@ const StyledButton = styled.a<{
     `}
 
   ${({ $size }) =>
-    $size === "sm" &&
+    $size === 'sm' &&
     `
       padding: 6px 12px;
       font-size: 0.85rem;
@@ -127,8 +127,8 @@ export const Button: React.FC<ButtonProps> = ({
   label,
   icon,
   disabled = false,
-  variant = "primary",
-  size = "md",
+  variant = 'primary',
+  size = 'md',
   href,
   download,
   target,

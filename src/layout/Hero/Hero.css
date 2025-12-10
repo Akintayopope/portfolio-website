@@ -254,7 +254,7 @@ section {
 }
 
 .content-card h3::before {
-  content: "";
+  content: '';
   width: 3px;
   height: 12px;
   border-radius: 3px;

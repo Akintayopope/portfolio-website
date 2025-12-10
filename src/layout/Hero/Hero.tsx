@@ -1,11 +1,11 @@
-import "./Hero.css";
-import { Image } from "../../components/Image/Image";
-import { Button } from "../../components/Button/Button";
-import { Heading } from "../../components/Heading/Heading";
-import { Typography } from "../../components/Typography/Typography";
-import { Card } from "../../components/Card/Card";
+import './Hero.css';
+import { Image } from '../../components/Image/Image';
+import { Button } from '../../components/Button/Button';
+import { Heading } from '../../components/Heading/Heading';
+import { Typography } from '../../components/Typography/Typography';
+import { Card } from '../../components/Card/Card';
 
-import { MapPin, GraduationCap, Briefcase, Sparkles } from "lucide-react";
+import { MapPin, GraduationCap, Briefcase, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -55,7 +55,7 @@ export default function Hero() {
                 label="View Projects"
                 variant="gradient"
                 onClick={() =>
-                  window.open("https://github.com/apopoola2", "_blank")
+                  window.open('https://github.com/apopoola2', '_blank')
                 }
               />
 

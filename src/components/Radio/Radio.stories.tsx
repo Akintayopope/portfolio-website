@@ -1,11 +1,11 @@
 // @ts-ignore
-import type { Meta, StoryObj } from "@storybook/react";
-import { Radio } from "./Radio";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Radio } from './Radio';
 
 const meta: Meta<typeof Radio> = {
-  title: "Components/Radio",
+  title: 'Components/Radio',
   component: Radio,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default meta;
@@ -13,26 +13,26 @@ type Story = StoryObj<typeof Radio>;
 
 export const Default: Story = {
   args: {
-    label: "Option A",
-    name: "example",
-    value: "A",
+    label: 'Option A',
+    name: 'example',
+    value: 'A',
   },
 };
 
 export const Checked: Story = {
   args: {
-    label: "Option B",
-    name: "example",
-    value: "B",
+    label: 'Option B',
+    name: 'example',
+    value: 'B',
     checked: true,
   },
 };
 
 export const Disabled: Story = {
   args: {
-    label: "Option C",
-    name: "example",
-    value: "C",
+    label: 'Option C',
+    name: 'example',
+    value: 'C',
     disabled: true,
   },
 };

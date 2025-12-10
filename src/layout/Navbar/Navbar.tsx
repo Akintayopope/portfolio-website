@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import "./Navbar.css";
+import React, { useState } from 'react';
+import './Navbar.css';
 
-import { Heading } from "../../components/Heading/Heading";
-import { Button } from "../../components/Button/Button";
-import { Dropdown } from "../../components/Dropdown/Dropdown"; // <-- YOU MUST USE THIS
-import { NavLink } from "../../components/NavLink/NavLink";
-import { navLinks } from "../../data/navLinks";
+import { Heading } from '../../components/Heading/Heading';
+import { Button } from '../../components/Button/Button';
+import { Dropdown } from '../../components/Dropdown/Dropdown'; // <-- YOU MUST USE THIS
+import { NavLink } from '../../components/NavLink/NavLink';
+import { navLinks } from '../../data/navLinks';
 
 function Navbar() {
   return (
@@ -51,7 +51,7 @@ function Navbar() {
             <Button
               label="Connect With Me"
               variant="gradient"
-              style={{ width: "100%", marginTop: "1.2rem" }}
+              style={{ width: '100%', marginTop: '1.2rem' }}
             />
           </div>
         </Dropdown>

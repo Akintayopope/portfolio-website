@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { LabelProps } from "./Label.types";
+import React from 'react';
+import styled from 'styled-components';
+import { LabelProps } from './Label.types';
 
 const StyledLabel = styled.span<{
   disabled?: boolean;
@@ -14,17 +14,17 @@ const StyledLabel = styled.span<{
   align-items: center;
   gap: 0.5rem;
 
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "default")};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'default')};
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
 
   ${({ $variant }) => {
     switch ($variant) {
-      case "soft":
+      case 'soft':
         return `
           background: rgba(255,255,255,0.08);
           color: white;
         `;
-      case "outlined":
+      case 'outlined':
         return `
           background: transparent;
           border: 1px solid rgba(255,255,255,0.3);
@@ -43,7 +43,7 @@ export const Label: React.FC<LabelProps> = ({
   text,
   children,
   disabled = false,
-  variant = "default",
+  variant = 'default',
   className,
 }) => {
   return (

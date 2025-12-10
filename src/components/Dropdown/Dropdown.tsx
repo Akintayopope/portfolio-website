@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { DropdownProps } from "./Dropdown.types";
-import { ChevronDown } from "lucide-react";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { DropdownProps } from './Dropdown.types';
+import { ChevronDown } from 'lucide-react';
 
 /* ---------- FORM DROPDOWN ---------- */
 
@@ -19,8 +19,8 @@ const StyledSelect = styled.select<{ disabled?: boolean }>`
   border-radius: 6px;
   border: 1px solid #d1d5db;
 
-  background: ${({ disabled }) => (disabled ? "#e5e7eb" : "white")};
-  color: ${({ disabled }) => (disabled ? "#6b7280" : "#111827")};
+  background: ${({ disabled }) => (disabled ? '#e5e7eb' : 'white')};
+  color: ${({ disabled }) => (disabled ? '#6b7280' : '#111827')};
 `;
 
 /* ---------- MENU DROPDOWN ---------- */
@@ -41,8 +41,8 @@ const Trigger = styled.button`
 
 /* Mobile / Desktop menu container */
 const Menu = styled.div<{ mobile?: boolean }>`
-  position: ${({ mobile }) => (mobile ? "fixed" : "absolute")};
-  top: ${({ mobile }) => (mobile ? "64px" : "110%")};
+  position: ${({ mobile }) => (mobile ? 'fixed' : 'absolute')};
+  top: ${({ mobile }) => (mobile ? '64px' : '110%')};
   left: 0;
   right: 0;
 
@@ -51,7 +51,7 @@ const Menu = styled.div<{ mobile?: boolean }>`
 
   padding: 0;
   width: 100%;
-  height: ${({ mobile }) => (mobile ? "calc(100vh - 64px)" : "auto")};
+  height: ${({ mobile }) => (mobile ? 'calc(100vh - 64px)' : 'auto')};
 
   display: flex;
   flex-direction: column;
@@ -83,19 +83,19 @@ const MenuItem = styled.div`
 /* ---------- COMPONENT ---------- */
 
 export const Dropdown: React.FC<DropdownProps> = ({
-  type = "form",
+  type = 'form',
   label,
   options = [],
   children,
   icon,
   disabled = false,
-  id = "dropdown",
+  id = 'dropdown',
   mobile = false,
   onItemClick,
 }) => {
   const [open, setOpen] = useState(false);
 
-  if (type === "form") {
+  if (type === 'form') {
     return (
       <Wrapper disabled={disabled}>
         {label && <label htmlFor={id}>{label}</label>}
@@ -114,15 +114,15 @@ export const Dropdown: React.FC<DropdownProps> = ({
         onClick={() => {
           const next = !open;
           setOpen(next);
-          if (next) document.body.classList.add("menu-open");
-          else document.body.classList.remove("menu-open");
+          if (next) document.body.classList.add('menu-open');
+          else document.body.classList.remove('menu-open');
         }}
       >
         {icon}
         {label}
         <ChevronDown
           size={16}
-          style={{ transform: open ? "rotate(180deg)" : "none" }}
+          style={{ transform: open ? 'rotate(180deg)' : 'none' }}
         />
       </Trigger>
 
@@ -132,7 +132,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
             <MenuItem
               onClick={() => {
                 setOpen(false);
-                document.body.classList.remove("menu-open");
+                document.body.classList.remove('menu-open');
                 onItemClick?.();
               }}
             >

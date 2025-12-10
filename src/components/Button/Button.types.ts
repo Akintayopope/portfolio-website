@@ -5,10 +5,10 @@ export interface ButtonProps
   disabled?: boolean;
 
   // EXISTING VARIANTS + NEW circle variant
-  variant?: "primary" | "secondary" | "gradient" | "circle";
+  variant?: 'primary' | 'secondary' | 'gradient' | 'circle';
 
   // NEW: size support
-  size?: "sm" | "md" | "lg";
+  size?: 'sm' | 'md' | 'lg';
 
   // Anchor support
   href?: string;

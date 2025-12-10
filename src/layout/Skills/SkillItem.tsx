@@ -1,4 +1,4 @@
-import "./SkillItem.css";
+import './SkillItem.css';
 
 interface SkillItemProps {
   label: string;

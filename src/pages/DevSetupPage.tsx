@@ -1,5 +1,5 @@
-import DevSetup from "../layout/DevSetup/DevSetup";
-import { Heading } from "../components/Heading/Heading";
+import DevSetup from '../layout/DevSetup/DevSetup';
+import { Heading } from '../components/Heading/Heading';
 
 export default function DevSetupPage() {
   return (

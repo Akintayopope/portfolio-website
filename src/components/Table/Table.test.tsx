@@ -10,7 +10,7 @@ test('renders table', () => {
           <td>Test</td>
         </tr>
       </tbody>
-    </Table>,
+    </Table>
   );
   expect(screen.getByText('Test')).toBeInTheDocument();
 });
@@ -23,7 +23,7 @@ test('disabled table has opacity', () => {
           <td>Disabled</td>
         </tr>
       </tbody>
-    </Table>,
+    </Table>
   );
   const table = container.querySelector('table');
   expect(table).toHaveStyle('opacity: 0.6');

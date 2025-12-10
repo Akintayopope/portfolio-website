@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import type { CardProps } from "./Card.types";
+import React from 'react';
+import styled from 'styled-components';
+import type { CardProps } from './Card.types';
 
 const Wrapper = styled.article<{
   disabled?: boolean;
@@ -13,33 +13,33 @@ const Wrapper = styled.article<{
   max-width: 100%;
   border-radius: 18px;
   overflow: hidden;
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   transition: 0.25s ease;
 
   background: ${({ variant }) =>
-    variant === "glass" ? "rgba(255, 255, 255, 0.06)" : "#ffffff"};
+    variant === 'glass' ? 'rgba(255, 255, 255, 0.06)' : '#ffffff'};
 
   border: ${({ variant }) =>
-    variant === "glass"
-      ? "1px solid rgba(255, 255, 255, 0.12)"
-      : "1px solid #e5e7eb"};
+    variant === 'glass'
+      ? '1px solid rgba(255, 255, 255, 0.12)'
+      : '1px solid #e5e7eb'};
 
   backdrop-filter: ${({ variant }) =>
-    variant === "glass" ? "blur(25px)" : "none"};
+    variant === 'glass' ? 'blur(25px)' : 'none'};
 
   box-shadow: ${({ variant }) =>
-    variant === "glass"
-      ? "0 20px 50px rgba(0,0,0,0.35)"
-      : "0 6px 18px rgba(0,0,0,0.06)"};
+    variant === 'glass'
+      ? '0 20px 50px rgba(0,0,0,0.35)'
+      : '0 6px 18px rgba(0,0,0,0.06)'};
 
   &:hover {
     transform: ${({ disabled, variant }) =>
       disabled
-        ? "none"
-        : variant === "glass"
-        ? "translateY(-4px)"
-        : "translateY(-2px)"};
+        ? 'none'
+        : variant === 'glass'
+        ? 'translateY(-4px)'
+        : 'translateY(-2px)'};
   }
 `;
 
@@ -60,7 +60,7 @@ export const Card: React.FC<CardProps & { bare?: boolean }> = ({
   bare = false, // ⭐ NEW MODE
   children,
   disabled = false,
-  variant = "default",
+  variant = 'default',
   className,
   onClick,
 }) => {
@@ -74,7 +74,7 @@ export const Card: React.FC<CardProps & { bare?: boolean }> = ({
       }}
       role="article"
     >
-      {imageSrc && <Img src={imageSrc} alt={title || "Card image"} />}
+      {imageSrc && <Img src={imageSrc} alt={title || 'Card image'} />}
 
       {/* ⭐ If bare=false → use padded body wrapper */}
       {!bare ? (

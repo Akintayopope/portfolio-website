@@ -1,5 +1,5 @@
-import Resources from "../layout/Resources/Resources";
-import { Heading } from "../components/Heading/Heading";
+import Resources from '../layout/Resources/Resources';
+import { Heading } from '../components/Heading/Heading';
 
 export default function ResourcesPage() {
   return (

@@ -1,10 +1,10 @@
-import "./Contact.css";
-import { Card } from "../../components/Card/Card";
-import { Heading } from "../../components/Heading/Heading";
-import { Typography } from "../../components/Typography/Typography";
-import { Button } from "../../components/Button/Button";
+import './Contact.css';
+import { Card } from '../../components/Card/Card';
+import { Heading } from '../../components/Heading/Heading';
+import { Typography } from '../../components/Typography/Typography';
+import { Button } from '../../components/Button/Button';
 
-import { Mail, MapPin, Clock, Briefcase } from "lucide-react";
+import { Mail, MapPin, Clock, Briefcase } from 'lucide-react';
 
 export default function Contact() {
   return (

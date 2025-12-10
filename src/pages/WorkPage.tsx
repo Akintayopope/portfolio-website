@@ -1,5 +1,5 @@
-import Work from "../layout/Work/Work";
-import { Heading } from "../components/Heading/Heading";
+import Work from '../layout/Work/Work';
+import { Heading } from '../components/Heading/Heading';
 
 export default function WorkPage() {
   return (

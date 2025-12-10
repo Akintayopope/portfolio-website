@@ -1,2 +1,2 @@
-import DevSetup from "./DevSetup";
+import DevSetup from './DevSetup';
 export default DevSetup;

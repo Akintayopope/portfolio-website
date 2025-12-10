@@ -1,5 +1,5 @@
-import Skills from "../layout/Skills/Skills";
-import { Heading } from "../components/Heading/Heading";
+import Skills from '../layout/Skills/Skills';
+import { Heading } from '../components/Heading/Heading';
 
 export default function SkillsPage() {
   return (

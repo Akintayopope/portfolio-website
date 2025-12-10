@@ -147,7 +147,7 @@
 }
 
 .bento-card::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -277,7 +277,7 @@
   padding: 1.5rem;
   margin-top: 1rem;
   border: 1px solid rgba(59, 130, 246, 0.2);
-  font-family: "Fira Code", "Courier New", monospace;
+  font-family: 'Fira Code', 'Courier New', monospace;
   font-size: 0.875rem;
   line-height: 1.6;
 }
@@ -353,7 +353,7 @@
   background: #0a0a0a;
   border-radius: 12px;
   padding: 1rem;
-  font-family: "Fira Code", "Courier New", monospace;
+  font-family: 'Fira Code', 'Courier New', monospace;
   border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
@@ -467,7 +467,7 @@
 }
 
 .font-display {
-  font-family: "Fira Code", "Courier New", monospace;
+  font-family: 'Fira Code', 'Courier New', monospace;
   font-size: 4rem;
   font-weight: 600;
   background: linear-gradient(135deg, #8b5cf6, #3b82f6);
@@ -538,7 +538,7 @@
 }
 
 .ligature-examples {
-  font-family: "Fira Code", "Courier New", monospace;
+  font-family: 'Fira Code', 'Courier New', monospace;
   font-size: 2rem;
   text-align: center;
   color: #3b82f6;

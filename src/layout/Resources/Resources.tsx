@@ -1,10 +1,10 @@
-import "./Resources.css";
-import { Card } from "../../components/Card/Card";
-import { Heading } from "../../components/Heading/Heading";
-import { Typography } from "../../components/Typography/Typography";
-import { Button } from "../../components/Button/Button";
-import { Table } from "../../components/Table/Table"; // ✅ ADD TABLE COMPONENT
-import { Label } from "../../components/Label/Label"; // ✅ ADD LABEL COMPONENT
+import './Resources.css';
+import { Card } from '../../components/Card/Card';
+import { Heading } from '../../components/Heading/Heading';
+import { Typography } from '../../components/Typography/Typography';
+import { Button } from '../../components/Button/Button';
+import { Table } from '../../components/Table/Table'; // ✅ ADD TABLE COMPONENT
+import { Label } from '../../components/Label/Label'; // ✅ ADD LABEL COMPONENT
 
 import {
   BookOpen,
@@ -13,73 +13,73 @@ import {
   Layers,
   Globe,
   ExternalLink,
-} from "lucide-react";
+} from 'lucide-react';
 
 export default function Resources() {
   const featured = {
-    title: "MDN Web Docs",
+    title: 'MDN Web Docs',
     summary:
-      "The most comprehensive and trusted documentation for HTML, CSS, JavaScript, and browser APIs. My number-one reference for accurate technical details.",
+      'The most comprehensive and trusted documentation for HTML, CSS, JavaScript, and browser APIs. My number-one reference for accurate technical details.',
     icon: <BookOpen size={64} color="#60a5fa" />,
-    link: "https://developer.mozilla.org",
+    link: 'https://developer.mozilla.org',
   };
 
   const resources = [
     {
-      title: "React Documentation",
+      title: 'React Documentation',
       summary:
-        "Official lessons and API guides for modern React patterns, hooks, components, and performance techniques.",
+        'Official lessons and API guides for modern React patterns, hooks, components, and performance techniques.',
       icon: <Code2 size={50} color="#a78bfa" />,
-      category: "Framework",
-      link: "https://react.dev",
+      category: 'Framework',
+      link: 'https://react.dev',
     },
     {
-      title: "GitHub",
+      title: 'GitHub',
       summary:
-        "Industry-standard platform for version control, collaboration, CI/CD workflows, repository hosting, and open-source development.",
+        'Industry-standard platform for version control, collaboration, CI/CD workflows, repository hosting, and open-source development.',
       icon: <Github size={50} color="#f472b6" />,
-      category: "Version Control",
-      link: "https://github.com",
+      category: 'Version Control',
+      link: 'https://github.com',
     },
     {
-      title: "Stack Overflow",
+      title: 'Stack Overflow',
       summary:
-        "The biggest Q&A knowledge base for debugging, solving problems, and learning from real-world developer discussions.",
+        'The biggest Q&A knowledge base for debugging, solving problems, and learning from real-world developer discussions.',
       icon: <Layers size={50} color="#38bdf8" />,
-      category: "Community",
-      link: "https://stackoverflow.com",
+      category: 'Community',
+      link: 'https://stackoverflow.com',
     },
     {
-      title: "freeCodeCamp",
+      title: 'freeCodeCamp',
       summary:
-        "Interactive courses, certifications, and hands-on projects to learn full-stack web development—for free.",
+        'Interactive courses, certifications, and hands-on projects to learn full-stack web development—for free.',
       icon: <Globe size={50} color="#4ade80" />,
-      category: "Education",
-      link: "https://freecodecamp.org",
+      category: 'Education',
+      link: 'https://freecodecamp.org',
     },
     {
-      title: "CSS-Tricks",
+      title: 'CSS-Tricks',
       summary:
-        "Front-end guides, layout techniques, animations, responsive design patterns, and practical CSS problem solving.",
+        'Front-end guides, layout techniques, animations, responsive design patterns, and practical CSS problem solving.',
       icon: <Layers size={50} color="#facc15" />,
-      category: "Design",
-      link: "https://css-tricks.com",
+      category: 'Design',
+      link: 'https://css-tricks.com',
     },
     {
-      title: "TypeScript Handbook",
+      title: 'TypeScript Handbook',
       summary:
-        "Official TypeScript reference for types, interfaces, generics, narrowing, and scalable JavaScript architecture.",
+        'Official TypeScript reference for types, interfaces, generics, narrowing, and scalable JavaScript architecture.',
       icon: <Code2 size={50} color="#22d3ee" />,
-      category: "Language",
-      link: "https://www.typescriptlang.org/docs/",
+      category: 'Language',
+      link: 'https://www.typescriptlang.org/docs/',
     },
     {
-      title: "Vercel Deployment",
+      title: 'Vercel Deployment',
       summary:
-        "Modern deployment tooling for React, Next.js, and Node apps with serverless functions and CI/CD workflows.",
+        'Modern deployment tooling for React, Next.js, and Node apps with serverless functions and CI/CD workflows.',
       icon: <Globe size={50} color="#e879f9" />,
-      category: "Deployment",
-      link: "https://vercel.com/docs",
+      category: 'Deployment',
+      link: 'https://vercel.com/docs',
     },
   ];
 

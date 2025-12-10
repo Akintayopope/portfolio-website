@@ -1,15 +1,15 @@
 // @ts-ignore
-import type { Meta, StoryObj } from "@storybook/react";
-import { Table } from "./Table";
-import { TableHeader } from "./subcomponents/TableHeader";
-import { TableRow } from "./subcomponents/TableRow";
-import { TableCell } from "./subcomponents/TableCell";
-import { TableFooter } from "./subcomponents/TableFooter";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Table } from './Table';
+import { TableHeader } from './subcomponents/TableHeader';
+import { TableRow } from './subcomponents/TableRow';
+import { TableCell } from './subcomponents/TableCell';
+import { TableFooter } from './subcomponents/TableFooter';
 
 const meta: Meta<typeof Table> = {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default meta;
@@ -18,7 +18,7 @@ type Story = StoryObj<typeof Table>;
 export const Default: Story = {
   render: () => (
     <Table>
-      <TableHeader columns={["Name", "Email", "Role"]} />
+      <TableHeader columns={['Name', 'Email', 'Role']} />
       <tbody>
         <TableRow>
           <TableCell>Jane Doe</TableCell>
@@ -39,7 +39,7 @@ export const Default: Story = {
 export const Disabled: Story = {
   render: () => (
     <Table disabled>
-      <TableHeader columns={["Name", "Email"]} />
+      <TableHeader columns={['Name', 'Email']} />
       <tbody>
         <TableRow>
           <TableCell>Sample</TableCell>

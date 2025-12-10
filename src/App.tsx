@@ -1,19 +1,19 @@
-import React from "react";
-import "./index.css";
+import React from 'react';
+import './index.css';
 
-import Navbar from "./layout/Navbar/Navbar";
+import Navbar from './layout/Navbar/Navbar';
 
 // Import React Router
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 
 // Import your new pages
-import HomePage from "./pages/HomePage";
-import WorkPage from "./pages/WorkPage";
-import SkillsPage from "./pages/SkillsPage";
-import ResourcesPage from "./pages/ResourcesPage";
-import DevSetupPage from "./pages/DevSetupPage";
-import ContactPage from "./pages/ContactPage";
-import Footer from "./layout/Footer/Footer";
+import HomePage from './pages/HomePage';
+import WorkPage from './pages/WorkPage';
+import SkillsPage from './pages/SkillsPage';
+import ResourcesPage from './pages/ResourcesPage';
+import DevSetupPage from './pages/DevSetupPage';
+import ContactPage from './pages/ContactPage';
+import Footer from './layout/Footer/Footer';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         <div className="blob blob-emerald"></div>
       </div>
 
-      <main style={{ position: "relative", zIndex: 2 }}>
+      <main style={{ position: 'relative', zIndex: 2 }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/work" element={<WorkPage />} />

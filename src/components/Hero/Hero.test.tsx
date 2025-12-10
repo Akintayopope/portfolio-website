@@ -9,7 +9,7 @@ test('renders hero title', () => {
 
 test('disabled hero has opacity styling', () => {
   const { container } = render(
-    <Hero title="Disabled Hero" backgroundImage="test.jpg" disabled />,
+    <Hero title="Disabled Hero" backgroundImage="test.jpg" disabled />
   );
 
   const heroWrapper = container.firstChild as HTMLElement;
