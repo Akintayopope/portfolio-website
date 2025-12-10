@@ -1,4 +1,4 @@
-name: Lint, Format, and Test
+name: Lint, Format, Test, and Build
 
 on:
   push:
@@ -9,14 +9,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # -----------------------------
+      # CHECKOUT REPOSITORY
+      # -----------------------------
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # -----------------------------
+      # NODE SETUP WITH CACHING
+      # -----------------------------
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: "npm"
 
+      # -----------------------------
+      # INSTALL DEPENDENCIES
+      # -----------------------------
       - name: Install dependencies
         run: npm install
 
@@ -33,7 +43,13 @@ jobs:
         run: npm run lint
 
       # -----------------------------
-      # REACT TESTING LIBRARY/JEST TESTS
+      # RUN TESTS
       # -----------------------------
       - name: Run Tests
         run: npm test -- --watchAll=false
+
+      # -----------------------------
+      # BUILD PRODUCTION BUNDLE
+      # -----------------------------
+      - name: Build Production App
+        run: npm run build

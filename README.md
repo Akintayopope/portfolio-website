@@ -4,79 +4,143 @@
 Full Stack Web Development **Assignment:**
 Coding Assignment 14 – Portfolio with Component Library & Docker ---
 
-## How to Run the Project with Docker
+## Running the Project with Docker
 
-### Prerequisites
+This project includes a multi-stage Docker build that produces a production-ready version of the portfolio site. Follow the steps below to build, run, and access the application.
 
-Docker Desktop installed and running, and port 5575 available on your machine.
+## Prerequisites
 
-To build the Docker image run: docker build -t popoola_akintayo_coding_assignment14 .
+### Ensure you have:
 
-To run the Docker container use: docker run -d --name popoola_akintayo_coding_assignment14 -p 5575:5575 popoola_akintayo_coding_assignment14
+Docker Desktop installed and running
 
-To view the application open your browser and go to: http://localhost:5575
+Port 5575 available on your machine
 
-To stop and remove the container run: docker stop popoola_akintayo_coding_assignment14 and then docker rm popoola_akintayo_coding_assignment14
+## Build the Docker Image
 
-Project Sections
+### This assignment requires the image to be named:
 
-Basic Information: Includes name, role, introduction, and a short summary.
-Work: Contains project titles, descriptions, images, tech stacks, and links.
-Skills: Lists languages, frameworks, tools, and development technologies.
-Resources: Includes titles, icons, summaries, and links to useful learning materials.
-Developer Setup: Describes VS Code setup, terminal configuration, and preferred coding font.
+popoola_akintayo_coding_assignment14
 
-Technology Stack
+Run:
 
-React using Create React App, TypeScript, a custom component library, CSS and Styled Components, Lucide React icons, and a Docker multi-stage build using Node and Serve.
+docker build -t popoola_akintayo_coding_assignment14 .
 
-# Getting Started with Create React App
+## Run the Docker Container
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### The running container must also use the required naming convention:
 
-## Available Scripts
+docker run -d \
+ --name popoola_akintayo_coding_assignment14 \
+ -p 5575:5575 \
+ popoola_akintayo_coding_assignment14
 
-In the project directory, you can run:
+## Access the Application
 
-### `npm start`
+### Once the container is running, open your browser and visit:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+http://localhost:5575
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Stop and Remove the Container
 
-### `npm test`
+### To stop the running container:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+docker stop popoola_akintayo_coding_assignment14
 
-### `npm run build`
+### To remove it:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+docker rm popoola_akintayo_coding_assignment14
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Sections
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Basic Information
 
-### `npm run eject`
+Includes introductory hero content such as:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Name
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Role
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Personal introduction
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Summary statement
 
-## Learn More
+## Work
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Showcases featured projects with:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Titles
 
-```
+Descriptions
 
-```
+Images
+
+Tech stacks
+
+Direct GitHub links
+
+## Skills
+
+Organized into categories including:
+
+Languages
+
+Frameworks
+
+Tools
+
+Development technologies
+
+## Resources
+
+A curated set of learning resources featuring:
+
+Titles
+
+Icons or images
+
+Short summaries
+
+External links
+
+## Developer Setup
+
+Outlines the development environment used:
+
+VS Code extensions & theme
+
+Terminal configuration (e.g., Zsh / Oh My Zsh)
+
+Preferred programming font with ligatures
+
+## Contact
+
+A dedicated Contact page
+
+Professionally styled UI consistent with your component system
+
+Social and external links
+
+Accessible and responsive design
+
+Integration of custom components and icons
+
+## Technology Stack
+
+This project uses:
+
+React (Create React App)
+
+TypeScript
+
+Custom Component Library
+
+CSS & Styled Components
+
+Lucide React Icons
+
+Docker Multi-Stage Build using:
+
+node:18-alpine for building
+
+serve for hosting the production build
