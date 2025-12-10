@@ -24,6 +24,7 @@ export default function Footer() {
               <a
                 href="https://github.com/apopoola2"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="social-link"
               >
                 <Github size={20} />
@@ -32,6 +33,7 @@ export default function Footer() {
               <a
                 href="https://www.linkedin.com/in/akintayopopoola"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="social-link"
               >
                 <Linkedin size={20} />
@@ -106,11 +108,12 @@ export default function Footer() {
             © {new Date().getFullYear()} Akintayo Popoola. All rights reserved.
           </div>
 
+          {/* FIXED: no more href="#" */}
           <div className="footer-bottom-links">
-            <a href="#" className="footer-bottom-link">
+            <a href="/privacy" className="footer-bottom-link">
               Privacy Policy
             </a>
-            <a href="#" className="footer-bottom-link">
+            <a href="/terms" className="footer-bottom-link">
               Terms of Service
             </a>
           </div>

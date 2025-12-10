@@ -1,3 +1,35 @@
+# Portfolio Website – Coding Assignment 14
+
+**Author:** Akintayo Popoola **Course:**
+Full Stack Web Development **Assignment:**
+Coding Assignment 14 – Portfolio with Component Library & Docker ---
+
+## How to Run the Project with Docker
+
+### Prerequisites
+
+Docker Desktop installed and running, and port 5575 available on your machine.
+
+To build the Docker image run: docker build -t popoola_akintayo_coding_assignment14 .
+
+To run the Docker container use: docker run -d --name popoola_akintayo_coding_assignment14 -p 5575:5575 popoola_akintayo_coding_assignment14
+
+To view the application open your browser and go to: http://localhost:5575
+
+To stop and remove the container run: docker stop popoola_akintayo_coding_assignment14 and then docker rm popoola_akintayo_coding_assignment14
+
+Project Sections
+
+Basic Information: Includes name, role, introduction, and a short summary.
+Work: Contains project titles, descriptions, images, tech stacks, and links.
+Skills: Lists languages, frameworks, tools, and development technologies.
+Resources: Includes titles, icons, summaries, and links to useful learning materials.
+Developer Setup: Describes VS Code setup, terminal configuration, and preferred coding font.
+
+Technology Stack
+
+React using Create React App, TypeScript, a custom component library, CSS and Styled Components, Lucide React icons, and a Docker multi-stage build using Node and Serve.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +76,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+```
+
+```
