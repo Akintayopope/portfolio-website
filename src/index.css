@@ -68,3 +68,18 @@ body {
 #contact {
   scroll-margin-top: 120px; /* adjust to your navbar height */
 }
+
+.page-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -28,7 +28,7 @@ function Navbar() {
 
         {/* RIGHT — DESKTOP BUTTON */}
         <div className="desktop-only">
-          <Button label="Connect With Me" variant="gradient" href="#contact" />
+          <Button label="Connect With Me" variant="gradient" href="/contact" />
         </div>
 
         <Dropdown

@@ -71,7 +71,7 @@ export default function Hero() {
       </section>
 
       {/* ---------------- ABOUT SECTION ---------------- */}
-      <section className="about-section">
+      <section id="about" className="about-section">
         <div className="container about-grid">
           {/* LEFT SIDEBAR ABOUT CARD */}
           <aside className="about-sidebar">

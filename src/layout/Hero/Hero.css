@@ -112,6 +112,13 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 3rem auto 2rem;
+  color: #ffffff;
+}
 
 .subtitle {
   margin: 0.5rem 0 1.1rem;
@@ -213,6 +220,22 @@ section {
   color: #c4b5fd;
   justify-self: center;
   margin-bottom: 10px;
+}
+
+/* Force small icons for About sidebar — strongest override possible */
+.about-sidebar .info-item .info-icon,
+.about-sidebar .info-item svg {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  max-width: 16px !important;
+
+  transform: scale(1) !important;
+}
+
+.about-sidebar .info-item {
+  align-items: center !important;
 }
 
 /* RIGHT COLUMN CONTENT */

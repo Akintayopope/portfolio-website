@@ -4,62 +4,140 @@ import { Heading } from "../../components/Heading/Heading";
 import { Typography } from "../../components/Typography/Typography";
 import { Button } from "../../components/Button/Button";
 
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Clock, Briefcase } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section className="contact-section" id="contact">
-      <Card variant="glass" className="contact-card">
-        <Heading level={2} className="contact-title">
-          Let&apos;s Connect
+    <section className="contact-container" id="contact">
+      {/* HEADER */}
+      <div className="page-header">
+        <Heading level={1} className="page-title">
+          Get In Touch
         </Heading>
 
-        <Typography muted className="contact-text">
-          I&apos;m always excited to discuss new opportunities, collaborations,
-          or just chat about tech. Feel free to reach out!
+        <Typography muted className="page-subtitle">
+          I'm always open to opportunities, collaborations, or meaningful tech
+          conversations. Let's build something amazing together.
         </Typography>
+      </div>
 
-        <div className="contact-socials">
-          {/* Email */}
-          <Button
-            variant="circle"
-            size="lg"
-            href="mailto:akintayopopoola.dev@gmail.com"
-            aria-label="Email"
-          >
-            <Mail />
-          </Button>
+      <div className="contact-grid">
+        {/* LEFT INFO CARDS */}
+        <div className="contact-info">
+          <Card variant="glass" className="info-card">
+            <div className="info-card-header">
+              <div className="info-icon">
+                <MapPin size={24} />
+              </div>
+              <Heading level={3} className="info-title">
+                Location
+              </Heading>
+            </div>
+            <Typography muted className="info-content">
+              Winnipeg, Manitoba <br /> Canada
+            </Typography>
+          </Card>
 
-          {/* GitHub */}
-          <Button
-            variant="circle"
-            size="lg"
-            href="https://github.com/Akintayopope"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-          >
-            <Github />
-          </Button>
+          <Card variant="glass" className="info-card">
+            <div className="info-card-header">
+              <div className="info-icon">
+                <Mail size={24} />
+              </div>
+              <Heading level={3} className="info-title">
+                Email
+              </Heading>
+            </div>
+            <Typography className="info-content">
+              <a
+                href="mailto:akintayopopoola.dev@gmail.com"
+                className="info-link"
+              >
+                apopoola2@rrc.ca
+              </a>
+            </Typography>
+          </Card>
 
-          {/* LinkedIn */}
-          <Button
-            variant="circle"
-            size="lg"
-            href="https://linkedin.com/in/akintayopope"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-          >
-            <Linkedin />
-          </Button>
+          <Card variant="glass" className="info-card">
+            <div className="info-card-header">
+              <div className="info-icon">
+                <Briefcase size={24} />
+              </div>
+              <Heading level={3} className="info-title">
+                Status
+              </Heading>
+            </div>
+            <Typography muted className="info-content">
+              Open to opportunities <br />
+              <span className="availability-dot">
+                ● Available for freelance & full-time
+              </span>
+            </Typography>
+          </Card>
+
+          <Card variant="glass" className="info-card">
+            <div className="info-card-header">
+              <div className="info-icon">
+                <Clock size={24} />
+              </div>
+              <Heading level={3} className="info-title">
+                Response Time
+              </Heading>
+            </div>
+            <Typography muted className="info-content">
+              Usually within 24–48 hours <br />
+              Monday – Friday, 9 AM – 6 PM CST
+            </Typography>
+          </Card>
         </div>
-      </Card>
 
-      <footer className="contact-footer">
-        © {new Date().getFullYear()} Akintayo Popoola — Built with passion and
-        curiosity.
-      </footer>
+        {/* RIGHT FORM */}
+        <Card variant="glass" className="contact-form-container">
+          <Heading level={2} className="form-title">
+            Send Me a Message
+          </Heading>
+
+          <Typography muted className="form-description">
+            Whether you want to discuss a project, explore an idea, or simply
+            connect, I'd love to hear from you.
+          </Typography>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("Thank you for your message! I'll get back to you soon.");
+              e.currentTarget.reset();
+            }}
+          >
+            <div className="form-row">
+              <div className="form-group">
+                <label>Your Name *</label>
+                <input type="text" required placeholder="John Doe" />
+              </div>
+              <div className="form-group">
+                <label>Your Email *</label>
+                <input type="email" required placeholder="john@example.com" />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label>Subject *</label>
+              <input type="text" required placeholder="Project Collaboration" />
+            </div>
+
+            <div className="form-group">
+              <label>Message *</label>
+              <textarea
+                required
+                placeholder="Tell me about your project or idea..."
+              />
+            </div>
+
+            <Button variant="gradient" className="submit-btn" type="submit">
+              Send Message
+            </Button>
+          </form>
+        </Card>
+      </div>
     </section>
   );
 }

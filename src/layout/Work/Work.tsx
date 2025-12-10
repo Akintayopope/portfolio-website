@@ -101,26 +101,33 @@ export default function Work() {
 
   return (
     <section id="work" className="work">
-      {/* ===========================
-          HEADING + DESCRIPTION
-      ============================ */}
-      <Heading level={2} className="work-title">
-        Featured Work
-      </Heading>
+      {/* =======================
+          SECTION HEADER
+      ======================== */}
+      <div className="section-header">
+        <span className="section-tag">
+          <span>💼</span>
+          <span>Portfolio</span>
+        </span>
 
-      <Typography size="lg" muted className="work-desc">
-        A curated selection of projects I’ve built across full-stack
-        development, backend engineering, data visualization, and secure web
-        systems.
-      </Typography>
+        <Heading level={2} className="work-title">
+          Featured Work
+        </Heading>
 
-      {/* ===========================
-          RADIO FILTERS
-      ============================ */}
+        <Typography muted className="section-description">
+          A curated selection of projects I’ve built across full-stack
+          development, backend engineering, data visualization, and secure web
+          systems.
+        </Typography>
+      </div>
+
+      {/* =======================
+          FILTER TABS
+      ======================== */}
       <div className="filter-tabs">
         <Radio
           label="All Projects"
-          name="project-filter"
+          name="proj-filter"
           value="all"
           checked={filter === "all"}
           className={filter === "all" ? "active" : ""}
@@ -128,17 +135,8 @@ export default function Work() {
         />
 
         <Radio
-          label="Python"
-          name="project-filter"
-          value="python"
-          checked={filter === "python"}
-          className={filter === "python" ? "active" : ""}
-          onChange={setFilter}
-        />
-
-        <Radio
           label="Web Development"
-          name="project-filter"
+          name="proj-filter"
           value="web"
           checked={filter === "web"}
           className={filter === "web" ? "active" : ""}
@@ -147,17 +145,26 @@ export default function Work() {
 
         <Radio
           label="Database"
-          name="project-filter"
+          name="proj-filter"
           value="database"
           checked={filter === "database"}
           className={filter === "database" ? "active" : ""}
           onChange={setFilter}
         />
+
+        <Radio
+          label="Python"
+          name="proj-filter"
+          value="python"
+          checked={filter === "python"}
+          className={filter === "python" ? "active" : ""}
+          onChange={setFilter}
+        />
       </div>
 
-      {/* ===========================
+      {/* =======================
           PROJECT GRID
-      ============================ */}
+      ======================== */}
       <div className="work-grid">
         {filteredProjects.map((project, index) => (
           <Card key={index} variant="glass" className="work-card" bare>
@@ -166,8 +173,9 @@ export default function Work() {
                 src={project.image}
                 alt={project.title}
                 width="100%"
-                height="400px"
+                height="250px"
                 rounded
+                className="project-image"
               />
 
               <Typography size="lg" weight="bold" className="project-title">
