@@ -73,14 +73,10 @@ export default function DevSetup() {
             <span>Font</span>
           </button>
         </div>
-
-        {/* ===================================================== */}
-        {/* ================== TAB CONTENT WRAPPER =============== */}
-        {/* ===================================================== */}
         <div className="tab-content-wrapper">
-          {/* ================== VS CODE TAB ================== */}
           <div
             className={`tab-content ${activeTab === 'vscode' ? 'active' : ''}`}
+            id="tab-vscode"
           >
             <div className="vscode-bento">
               {/* EXTENSIONS */}
@@ -135,13 +131,12 @@ export default function DevSetup() {
                     </div>
 
                     <div className="code-line">
-                      <span className="code-comment">// Beautiful syntax</span>
+                      <span className="code-comment">Beautiful syntax</span>
                     </div>
                   </div>
                 </div>
               </Card>
 
-              {/* SETTINGS */}
               <Card className="bento-card">
                 <div className="bento-header">
                   <div className="bento-icon">
@@ -183,6 +178,7 @@ export default function DevSetup() {
             className={`tab-content ${
               activeTab === 'terminal' ? 'active' : ''
             }`}
+            id="tab-terminal"
           >
             <div className="terminal-split">
               <Card className="terminal-card">
@@ -257,7 +253,7 @@ export default function DevSetup() {
           {/* ================== FONT TAB ================== */}
           <div
             className={`tab-content ${activeTab === 'font' ? 'active' : ''}`}
-            id="tab-font" // Add this if you want
+            id="tab-font"
           >
             <div className="font-showcase">
               <Card variant="glass" className="font-hero">

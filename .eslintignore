@@ -1,0 +1,7 @@
+build
+node_modules
+.eslintcache
+
+# Ignore Storybook files
+**/*.stories.tsx
+**/*.stories.ts

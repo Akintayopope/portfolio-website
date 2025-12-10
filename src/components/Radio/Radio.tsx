@@ -2,9 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { RadioProps } from './Radio.types';
 
-const Wrapper = styled.label.attrs((props: any) => ({
+interface WrapperProps {
+  htmlFor?: string;
+  $disabled?: boolean;
+}
+
+const Wrapper = styled.label.attrs<WrapperProps>((props) => ({
   htmlFor: props.htmlFor,
-}))<{ $disabled?: boolean }>`
+}))<WrapperProps>`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -34,19 +39,20 @@ export const Radio: React.FC<RadioProps & { className?: string }> = ({
   return (
     <Wrapper
       className={`radio-wrapper ${className ?? ''}`}
-      htmlFor={id} // ⭐ now forwarded properly
+      htmlFor={id}
       $disabled={disabled}
     >
       <Input
-        id={id}
+        id={id} // REQUIRED for getByLabelText
         type="radio"
         name={name}
         value={value}
-        checked={checked}
         disabled={disabled}
-        $disabled={disabled}
         onChange={(e) => onChange && onChange(e.target.value)}
+        $disabled={disabled}
+        style={{ opacity: disabled ? 0.6 : 1 }}
       />
+
       <span>{label}</span>
     </Wrapper>
   );

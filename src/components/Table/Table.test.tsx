@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { Table } from './Table';
 
-test('renders table', () => {
+test('renders table content', () => {
   render(
     <Table>
       <tbody>
@@ -12,11 +12,12 @@ test('renders table', () => {
       </tbody>
     </Table>
   );
+
   expect(screen.getByText('Test')).toBeInTheDocument();
 });
 
 test('disabled table has opacity', () => {
-  const { container } = render(
+  render(
     <Table disabled>
       <tbody>
         <tr>
@@ -25,6 +26,7 @@ test('disabled table has opacity', () => {
       </tbody>
     </Table>
   );
-  const table = container.querySelector('table');
+
+  const table = screen.getByRole('table');
   expect(table).toHaveStyle('opacity: 0.6');
 });

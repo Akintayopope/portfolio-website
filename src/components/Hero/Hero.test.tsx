@@ -8,10 +8,8 @@ test('renders hero title', () => {
 });
 
 test('disabled hero has opacity styling', () => {
-  const { container } = render(
-    <Hero title="Disabled Hero" backgroundImage="test.jpg" disabled />
-  );
+  render(<Hero title="Disabled Hero" backgroundImage="test.jpg" disabled />);
 
-  const heroWrapper = container.firstChild as HTMLElement;
-  expect(heroWrapper).toHaveStyle('opacity: 0.5');
+  const hero = screen.getByRole('region');
+  expect(hero).toHaveStyle('opacity: 0.5');
 });

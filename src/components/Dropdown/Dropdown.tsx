@@ -10,7 +10,7 @@ const Wrapper = styled.div<{ disabled?: boolean }>`
   flex-direction: column;
   width: 100%;
   gap: 6px;
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
+  opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
 `;
 
 const StyledSelect = styled.select<{ disabled?: boolean }>`
@@ -21,6 +21,8 @@ const StyledSelect = styled.select<{ disabled?: boolean }>`
 
   background: ${({ disabled }) => (disabled ? '#e5e7eb' : 'white')};
   color: ${({ disabled }) => (disabled ? '#6b7280' : '#111827')};
+
+  opacity: ${({ disabled }) => (disabled ? 0.6 : 1)}; // ADD THIS
 `;
 
 /* ---------- MENU DROPDOWN ---------- */

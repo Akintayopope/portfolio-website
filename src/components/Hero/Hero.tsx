@@ -88,7 +88,7 @@ export const Hero: React.FC<HeroProps> = ({
   disabled = false,
 }) => {
   return (
-    <HeroWrapper $disabled={disabled}>
+    <HeroWrapper role="region" $disabled={disabled}>
       <Title>{title}</Title>
       {subtitle && <Subtitle>{subtitle}</Subtitle>}
     </HeroWrapper>

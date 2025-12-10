@@ -8,7 +8,9 @@ test('renders card title', () => {
 });
 
 test('disabled card has reduced opacity', () => {
-  const { container } = render(<Card title="Disabled" disabled />);
-  const root = container.firstChild as HTMLElement;
-  expect(root).toHaveStyle('opacity: 0.6');
+  render(<Card title="Disabled" disabled />);
+
+  // Query card by role instead of accessing container DOM
+  const card = screen.getByRole('article');
+  expect(card).toHaveStyle('opacity: 0.6');
 });
