@@ -13,6 +13,7 @@
 .devsetup-section {
   position: relative;
   z-index: 10;
+  padding: 4rem 0;
 }
 
 .setup-tabs {
@@ -23,10 +24,6 @@
 .tab-button {
   position: relative;
   z-index: 30;
-}
-
-.devsetup-section {
-  padding: 4rem 0;
 }
 
 .devsetup-container {

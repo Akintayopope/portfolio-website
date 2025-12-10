@@ -1,43 +1,53 @@
-import React from 'react';
-import styled from 'styled-components';
-import { RadioProps } from './Radio.types';
+import React from "react";
+import styled from "styled-components";
+import { RadioProps } from "./Radio.types";
 
-const Wrapper = styled.label`
+const Wrapper = styled.label.attrs((props: any) => ({
+  htmlFor: props.htmlFor,
+}))<{ $disabled?: boolean }>`
   display: flex;
   align-items: center;
-  gap: 8px;
-  cursor: pointer;
+  gap: 10px;
+  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
+  opacity: ${({ $disabled }) => ($disabled ? 0.6 : 1)};
+  user-select: none;
 `;
 
 const Input = styled.input<{ $disabled?: boolean }>`
   width: 18px;
   height: 18px;
-  accent-color: #2563eb;
-  opacity: ${({ $disabled }) => ($disabled ? 0.6 : 1)};
-  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'pointer')};
+  accent-color: #8b5cf6;
+  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
 `;
 
-export const Radio: React.FC<RadioProps> = ({
+export const Radio: React.FC<RadioProps & { className?: string }> = ({
   label,
   name,
   value,
   checked = false,
   disabled = false,
+  className,
   onChange,
 }) => {
+  const id = `${name}-${value}`;
+
   return (
-    <Wrapper>
+    <Wrapper
+      className={`radio-wrapper ${className ?? ""}`}
+      htmlFor={id} // ⭐ now forwarded properly
+      $disabled={disabled}
+    >
       <Input
+        id={id}
         type="radio"
         name={name}
         value={value}
         checked={checked}
         disabled={disabled}
         $disabled={disabled}
-        aria-label={label}
-        onChange={() => onChange && onChange(value)}
+        onChange={(e) => onChange && onChange(e.target.value)}
       />
-      {label}
+      <span>{label}</span>
     </Wrapper>
   );
 };

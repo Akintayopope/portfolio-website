@@ -17,7 +17,6 @@ const Wrapper = styled.article<{
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   transition: 0.25s ease;
 
-  /* DEFAULT — white card (old behavior) */
   background: ${({ variant }) =>
     variant === "glass" ? "rgba(255, 255, 255, 0.06)" : "#ffffff"};
 
@@ -54,22 +53,11 @@ const Body = styled.div`
   padding: 20px 24px;
 `;
 
-const Title = styled.h3`
-  margin-bottom: 4px;
-  font-size: 1.25rem;
-  line-height: 1.6rem;
-`;
-
-const Subtitle = styled.p`
-  margin-bottom: 10px;
-  color: #6b7280;
-  font-size: 0.95rem;
-`;
-
-export const Card: React.FC<CardProps> = ({
+export const Card: React.FC<CardProps & { bare?: boolean }> = ({
   title,
   subtitle,
   imageSrc,
+  bare = false, // ⭐ NEW MODE
   children,
   disabled = false,
   variant = "default",
@@ -87,11 +75,20 @@ export const Card: React.FC<CardProps> = ({
       role="article"
     >
       {imageSrc && <Img src={imageSrc} alt={title || "Card image"} />}
-      <Body>
-        {title && <Title>{title}</Title>}
-        {subtitle && <Subtitle>{subtitle}</Subtitle>}
-        {children}
-      </Body>
+
+      {/* ⭐ If bare=false → use padded body wrapper */}
+      {!bare ? (
+        <Body>
+          {title && <h3>{title}</h3>}
+          {subtitle && <p>{subtitle}</p>}
+          {children}
+        </Body>
+      ) : (
+        <>
+          {/* ⭐ If bare=true → render children directly */}
+          {children}
+        </>
+      )}
     </Wrapper>
   );
 };

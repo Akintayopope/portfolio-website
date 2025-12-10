@@ -1,7 +1,13 @@
+import { useState } from "react";
 import "./Work.css";
+
+import { Card } from "../../components/Card/Card";
 import { Image } from "../../components/Image/Image";
 import { Button } from "../../components/Button/Button";
 import { Typography } from "../../components/Typography/Typography";
+import { Heading } from "../../components/Heading/Heading";
+import { Label } from "../../components/Label/Label";
+import { Radio } from "../../components/Radio/Radio";
 
 const projects = [
   {
@@ -16,61 +22,91 @@ const projects = [
       "Devise",
       "ActiveStorage",
     ],
-    link: "https://github.com/Akintayopop/Prairie_Naturals",
+    link: "https://github.com/Akintayopope/Prairie_Naturals",
   },
 
   {
     title: "CityTrack Winnipeg – Civic Data Dashboard",
     description:
-      "A dashboard visualizing municipal data including expenses, categories, and departmental spending. Built with Rails + Postgres + chart visualizations.",
+      "A dashboard visualizing municipal data including expenses, categories, and spending. Built with Rails, Postgres, charts, and Bootstrap.",
     image: "/project-citytrack.png",
     tech: ["Rails", "PostgreSQL", "Charts.js", "Bootstrap"],
-    link: "https://github.com/Akintayopop/citytrack_winnipeg",
+    link: "https://github.com/Akintayopope/citytrack_winnipeg",
   },
 
   {
     title: "Node Farm – Node.js Mini Project",
     description:
-      "A Node.js project demonstrating routing, file reading, dynamic templates, and simple product rendering using vanilla Node without frameworks.",
+      "A Node.js project demonstrating routing, file reading, dynamic templates, and basic product rendering without frameworks.",
     image: "/project-nodefarm.png",
     tech: ["Node.js", "FileSystem", "HTTP Module"],
-    link: "https://github.com/Akintayopop/node-farm",
+    link: "https://github.com/Akintayopope/node_farm",
   },
 
   {
     title: "CuisineHub CMS – PHP Content Management System",
     description:
-      "A PHP content management system for managing cuisines, recipes, and dishes. Includes authentication, admin dashboard, CRUD features, MySQL PDO backend, and responsive Bootstrap UI.",
+      "A CMS for cuisines and recipes with authentication, admin dashboard, PDO backend, CRUD operations, and Bootstrap UI.",
     image: "/project-cuisinehub.png",
     tech: ["PHP", "MySQL", "PDO", "Bootstrap", "Authentication"],
-    link: "https://github.com/Akintayopop/CuisineHub-CMS",
+    link: "https://github.com/Akintayopope/CuisineHub-CMS",
   },
 
   {
     title: "Flask Image Processing API",
     description:
-      "A backend API built with Flask that processes images, validates file uploads, supports multiple transformations, and returns structured JSON responses. Demonstrates backend engineering and practical computer vision.",
+      "A Flask backend API for image validation, transformation, and JSON response data — demonstrating backend engineering skills.",
     image: "/project-flask.png",
     tech: ["Python", "Flask", "Pillow/OpenCV", "REST API"],
-    link: "https://github.com/Akintayopop/flask-image-api",
+    link: "https://github.com/Akintayopope/Flask-Image-API",
   },
 
   {
     title: "Winnipeg Burial Dashboard – Data Visualization Project",
     description:
-      "A data analytics dashboard that cleans, transforms, and visualizes burial records in Winnipeg using modern Python tools. Designed for structured reporting and insights.",
+      "A data visualization dashboard built with Pandas, Plotly, and Dash to analyze burial records in Winnipeg.",
     image: "/project-winnipeg.png",
     tech: ["Python", "Pandas", "Plotly", "Dash"],
-    link: "https://github.com/Akintayopop/winnipeg-burial-dashboard",
+    link: "https://github.com/Akintayopope/Winnipeg-Burial-Dashboard",
   },
 ];
 
 export default function Work() {
+  const [filter, setFilter] = useState("all");
+
+  const filteredProjects = projects.filter((project) => {
+    if (filter === "all") return true;
+
+    if (filter === "python")
+      return (
+        project.tech.includes("Python") ||
+        project.tech.includes("Flask") ||
+        project.tech.includes("Pandas")
+      );
+
+    if (filter === "web")
+      return (
+        project.tech.includes("Ruby on Rails") ||
+        project.tech.includes("Node.js") ||
+        project.tech.includes("PHP")
+      );
+
+    if (filter === "database")
+      return (
+        project.tech.includes("PostgreSQL") || project.tech.includes("MySQL")
+      );
+
+    return true;
+  });
+
   return (
     <section id="work" className="work">
-      <Typography size="xl" weight="bold" className="work-title">
-        My Projects
-      </Typography>
+      {/* ===========================
+          HEADING + DESCRIPTION
+      ============================ */}
+      <Heading level={2} className="work-title">
+        Featured Work
+      </Heading>
 
       <Typography size="lg" muted className="work-desc">
         A curated selection of projects I’ve built across full-stack
@@ -78,56 +114,90 @@ export default function Work() {
         systems.
       </Typography>
 
+      {/* ===========================
+          RADIO FILTERS
+      ============================ */}
       <div className="filter-tabs">
-        <button className="filter-btn active" data-filter="all">
-          All Projects
-        </button>
-        <button className="filter-btn" data-filter="cs">
-          Python
-        </button>
-        <button className="filter-btn" data-filter="web">
-          Web Development
-        </button>
-        <button className="filter-btn" data-filter="ai">
-          Database
-        </button>
+        <Radio
+          label="All Projects"
+          name="project-filter"
+          value="all"
+          checked={filter === "all"}
+          className={filter === "all" ? "active" : ""}
+          onChange={setFilter}
+        />
+
+        <Radio
+          label="Python"
+          name="project-filter"
+          value="python"
+          checked={filter === "python"}
+          className={filter === "python" ? "active" : ""}
+          onChange={setFilter}
+        />
+
+        <Radio
+          label="Web Development"
+          name="project-filter"
+          value="web"
+          checked={filter === "web"}
+          className={filter === "web" ? "active" : ""}
+          onChange={setFilter}
+        />
+
+        <Radio
+          label="Database"
+          name="project-filter"
+          value="database"
+          checked={filter === "database"}
+          className={filter === "database" ? "active" : ""}
+          onChange={setFilter}
+        />
       </div>
 
+      {/* ===========================
+          PROJECT GRID
+      ============================ */}
       <div className="work-grid">
-        {projects.map((project, index) => (
-          <div className="work-card" key={index}>
-            <Image
-              src={project.image}
-              alt={project.title}
-              width="400px%"
-              height="280px"
-              rounded={true}
-            />
+        {filteredProjects.map((project, index) => (
+          <Card key={index} variant="glass" className="work-card" bare>
+            <div className="card-body">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width="100%"
+                height="400px"
+                rounded
+              />
 
-            <Typography size="lg" weight="bold" className="project-title">
-              {project.title}
-            </Typography>
+              <Typography size="lg" weight="bold" className="project-title">
+                {project.title}
+              </Typography>
 
-            <Typography muted className="project-desc">
-              {project.description.length > 90
-                ? project.description.slice(0, 90) + "..."
-                : project.description}
-            </Typography>
+              <Typography muted className="project-desc">
+                {project.description.length > 90
+                  ? project.description.slice(0, 90) + "..."
+                  : project.description}
+              </Typography>
 
-            <ul className="tech-list">
-              {project.tech.map((tech, idx) => (
-                <li key={idx}>{tech}</li>
-              ))}
-            </ul>
+              <div className="tech-list">
+                {project.tech.map((tech, idx) => (
+                  <Label key={idx} variant="soft">
+                    {tech}
+                  </Label>
+                ))}
+              </div>
+            </div>
 
-            <div className="button-wrapper">
+            <div className="card-footer">
               <Button
                 label="View Project"
+                variant="gradient"
                 className="project-button"
                 onClick={() => window.open(project.link, "_blank")}
               />
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </section>

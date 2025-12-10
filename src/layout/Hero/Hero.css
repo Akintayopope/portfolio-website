@@ -7,6 +7,9 @@
   position: relative;
   overflow-x: hidden;
 }
+section {
+  scroll-margin-top: 120px;
+}
 
 /* Center container */
 .container {

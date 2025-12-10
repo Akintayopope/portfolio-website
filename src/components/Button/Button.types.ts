@@ -3,9 +3,14 @@ export interface ButtonProps
   label?: string | React.ReactNode;
   icon?: React.ReactNode;
   disabled?: boolean;
-  variant?: "primary" | "secondary" | "gradient";
 
-  // NEW: allow anchor usage
+  // EXISTING VARIANTS + NEW circle variant
+  variant?: "primary" | "secondary" | "gradient" | "circle";
+
+  // NEW: size support
+  size?: "sm" | "md" | "lg";
+
+  // Anchor support
   href?: string;
   download?: string;
   target?: string;

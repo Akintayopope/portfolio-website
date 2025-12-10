@@ -2,14 +2,22 @@
    WORK SECTION WRAPPER
 ================================ */
 .work {
-  max-width: 1152px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
 /* Title + Description */
 .work-title {
-  margin-bottom: 0.5rem;
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 0.5rem !important;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center !important; /* ⭐ Centered */
+  width: 100%; /* ⭐ Ensures center alignment works */
+  display: block;
 }
 
 .work-desc {
@@ -17,7 +25,8 @@
   max-width: 700px;
   line-height: 1.7;
   font-size: 1.05rem;
-  color: #cbd5e1;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 12px !important;
 }
 
 /* ===============================
@@ -42,6 +51,12 @@
   flex-direction: column;
   height: 100%;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 520px; /* ⭐ adjust if needed */
+  justify-content: space-between;
+}
+
+.work-card .project-desc {
+  flex-grow: 1; /* pushes button downward evenly */
 }
 
 .work-card:hover {
@@ -67,9 +82,11 @@
   font-size: 1.25rem !important;
   font-weight: 700 !important;
   letter-spacing: -0.3px !important;
-  margin-top: 0.75rem !important;
-  margin-bottom: 0.4rem !important;
-  color: #f1f5f9 !important;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ===============================
@@ -121,38 +138,44 @@
   box-shadow: 0 8px 22px rgba(139, 92, 246, 0.25);
 }
 
-/* ===============================
-   FILTER TABS
-================================ */
+/* ======================================================
+   RADIO FILTER STYLING — Show real radio circles
+====================================================== */
+
 .filter-tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 2rem; /* spacing between radios */
   margin-bottom: 2.5rem;
 }
 
-.filter-btn {
-  padding: 0.5rem 1.25rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 500;
+.filter-tabs .radio-wrapper {
+  position: relative; /* ⭐ REQUIRED */
+  display: flex;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
-  transition: all 0.2s;
-  border: none;
-  background: rgba(255, 255, 255, 0.05);
-  color: #94a3b8;
 }
 
-.filter-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+.filter-tabs .radio-wrapper.active span {
+  color: #ffffff;
+  font-weight: 600;
 }
 
-.filter-btn.active {
-  background: linear-gradient(90deg, #8b5cf6, #d946ef);
-  color: white;
+.filter-tabs .radio-wrapper input[type="radio"] {
+  position: relative; /* ⭐ Undo the absolute block */
+  opacity: 1; /* Ensure visible and clickable */
+  pointer-events: auto; /* ⭐ Allow clicks */
 }
 
-/* Wrapper for button alignment */
-.button-wrapper {
-  margin-top: auto;
+.filter-tabs .radio-wrapper:hover span {
+  color: #e2e8f0;
+}
+
+.work-card img {
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  border-radius: 14px !important;
+  transition: opacity 0.2s !important;
 }

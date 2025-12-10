@@ -134,17 +134,17 @@ export default function Skills() {
         </div>
 
         <div className="stat-card">
-          <div className="stat-number">20+</div>
+          <div className="stat-number">18+</div>
           <div className="stat-label">Tools Mastered</div>
         </div>
 
         <div className="stat-card">
-          <div className="stat-number">30+</div>
+          <div className="stat-number">10+</div>
           <div className="stat-label">Projects Built</div>
         </div>
 
         <div className="stat-card">
-          <div className="stat-number">4+</div>
+          <div className="stat-number">3+</div>
           <div className="stat-label">Years Experience</div>
         </div>
       </div>

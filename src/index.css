@@ -58,3 +58,13 @@ body {
     transform: scale(1.05);
   }
 }
+
+#home,
+#about,
+#work,
+#skills,
+#resources,
+#devsetup,
+#contact {
+  scroll-margin-top: 120px; /* adjust to your navbar height */
+}

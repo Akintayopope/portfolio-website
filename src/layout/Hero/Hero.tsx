@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
 
       {/* ---------------- HERO SECTION ---------------- */}
-      <section className="hero">
+      <section className="hero" id="home">
         <div className="container">
           <div className="hero-content">
             {/* PROFILE IMAGE */}

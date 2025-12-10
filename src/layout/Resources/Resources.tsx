@@ -3,6 +3,8 @@ import { Card } from "../../components/Card/Card";
 import { Heading } from "../../components/Heading/Heading";
 import { Typography } from "../../components/Typography/Typography";
 import { Button } from "../../components/Button/Button";
+import { Table } from "../../components/Table/Table"; // ✅ ADD TABLE COMPONENT
+import { Label } from "../../components/Label/Label"; // ✅ ADD LABEL COMPONENT
 
 import {
   BookOpen,
@@ -72,7 +74,7 @@ export default function Resources() {
       link: "https://www.typescriptlang.org/docs/",
     },
     {
-      title: "Vercel Deployment Guides",
+      title: "Vercel Deployment",
       summary:
         "Modern deployment tooling for React, Next.js, and Node apps with serverless functions and CI/CD workflows.",
       icon: <Globe size={50} color="#e879f9" />,
@@ -87,7 +89,6 @@ export default function Resources() {
       <div className="resources-header">
         <span className="resources-tag">Learning Hub</span>
 
-        {/* Use Heading-level-2 for section heading */}
         <Heading level={2} className="resources-title-gradient resources-title">
           Developer Resources
         </Heading>
@@ -104,7 +105,6 @@ export default function Resources() {
         <Card variant="glass" className="featured-card">
           <div className="featured-icon">{featured.icon}</div>
 
-          {/* Heading for featured title */}
           <Heading level={3} className="featured-title">
             {featured.title}
           </Heading>
@@ -128,7 +128,6 @@ export default function Resources() {
           <Card key={i} variant="glass" className="resource-card">
             <div className="resource-icon">{item.icon}</div>
 
-            {/* Resource title with Heading */}
             <Heading level={3} className="resource-title">
               {item.title}
             </Heading>
@@ -138,10 +137,8 @@ export default function Resources() {
             </Typography>
 
             <div className="resource-footer">
-              <div className="resource-category">
-                <span className="category-dot"></span>
-                {item.category}
-              </div>
+              {/* CATEGORY AS LABEL COMPONENT */}
+              <Label text={item.category} />
 
               <a
                 href={item.link}
@@ -154,6 +151,43 @@ export default function Resources() {
             </div>
           </Card>
         ))}
+      </div>
+
+      {/* ============================
+          TABLE VIEW (NEW SECTION)
+      ============================= */}
+      <div className="resources-table-wrapper">
+        <Heading level={3} className="table-heading">
+          Resource Index (Table View)
+        </Heading>
+
+        <Table>
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Category</th>
+              <th>Visit</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {resources.map((item, i) => (
+              <tr key={i}>
+                <td>{item.title}</td>
+
+                <td>
+                  <Label text={item.category} />
+                </td>
+
+                <td>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    Open <ExternalLink size={14} />
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
       </div>
 
       {/* STATS SECTION */}
