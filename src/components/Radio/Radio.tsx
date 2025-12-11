@@ -43,7 +43,7 @@ export const Radio: React.FC<RadioProps & { className?: string }> = ({
       $disabled={disabled}
     >
       <Input
-        id={id} // REQUIRED for getByLabelText
+        id={id}
         type="radio"
         name={name}
         value={value}

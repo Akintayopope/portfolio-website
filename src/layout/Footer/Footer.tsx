@@ -5,9 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        {/* MAIN GRID */}
         <div className="footer-grid">
-          {/* BRAND SECTION */}
           <div className="footer-brand">
             <div className="brand-header">
               <div className="brand-icon">AP</div>
@@ -45,7 +43,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* QUICK LINKS */}
           <div className="footer-section">
             <h3>Quick Links</h3>
             <div className="footer-links">
@@ -73,7 +70,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* CONTACT DETAILS */}
           <div className="footer-section">
             <h3>Get in Touch</h3>
 
@@ -102,13 +98,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* FOOTER BOTTOM */}
         <div className="footer-bottom">
           <div className="copyright">
             © {new Date().getFullYear()} Akintayo Popoola. All rights reserved.
           </div>
 
-          {/* FIXED: no more href="#" */}
           <div className="footer-bottom-links">
             <a href="/privacy" className="footer-bottom-link">
               Privacy Policy

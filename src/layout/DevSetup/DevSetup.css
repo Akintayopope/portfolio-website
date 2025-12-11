@@ -120,14 +120,8 @@
   justify-content: center;
 }
 
-/* Tab Content wrapper */
-.tab-outer {
-  /* just a wrapper so our conditional content sits nicely */
-}
-
 /* Tab Content */
 
-/* VS Code Layout - Bento Box Style */
 .vscode-bento {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

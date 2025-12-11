@@ -137,7 +137,6 @@
    NEW - MOBILE DROPDOWN MENU
 =========================== */
 
-/* This wraps your Dropdown for mobile */
 .mobile-menu-content {
   display: flex;
   flex-direction: column;
@@ -148,7 +147,6 @@
   animation: dropdownFade 0.25s ease;
 }
 
-/* Each mobile nav link */
 .mobile-menu-content .nav-link {
   padding: 0.9rem 1rem;
   color: #cbd5e1;
@@ -159,7 +157,6 @@
   color: white;
 }
 
-/* Animation */
 @keyframes dropdownFade {
   from {
     opacity: 0;
@@ -171,9 +168,6 @@
   }
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
 .desktop-only {
   display: flex;
 }
@@ -187,14 +181,6 @@
     display: flex;
   }
 }
-
-/* Wrap icon + label in one row */
-/* .nav-link-item {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: #cbd5e1;
-} */
 
 .nav-link-item {
   width: 100%;

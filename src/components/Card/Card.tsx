@@ -76,7 +76,6 @@ export const Card: React.FC<CardProps & { bare?: boolean }> = ({
     >
       {imageSrc && <Img src={imageSrc} alt={title || 'Card image'} />}
 
-      {/* ⭐ If bare=false → use padded body wrapper */}
       {!bare ? (
         <Body>
           {title && <h3>{title}</h3>}
@@ -84,10 +83,7 @@ export const Card: React.FC<CardProps & { bare?: boolean }> = ({
           {children}
         </Body>
       ) : (
-        <>
-          {/* ⭐ If bare=true → render children directly */}
-          {children}
-        </>
+        <>{children}</>
       )}
     </Wrapper>
   );

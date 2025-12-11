@@ -6,5 +6,5 @@ export interface CardProps {
   disabled?: boolean;
   onClick?: () => void;
   className?: string;
-  variant?: 'light' | 'glass'; // <-- added
+  variant?: 'light' | 'glass';
 }

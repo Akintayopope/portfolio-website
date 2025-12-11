@@ -66,7 +66,7 @@ body {
 #resources,
 #devsetup,
 #contact {
-  scroll-margin-top: 120px; /* adjust to your navbar height */
+  scroll-margin-top: 120px;
 }
 
 .page-container {
@@ -80,6 +80,7 @@ body {
   margin-bottom: 2rem;
   font-size: 2.4rem;
   background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

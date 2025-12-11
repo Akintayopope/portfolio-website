@@ -3,9 +3,8 @@ import { Card } from '../../components/Card/Card';
 import { Heading } from '../../components/Heading/Heading';
 import { Typography } from '../../components/Typography/Typography';
 import { Button } from '../../components/Button/Button';
-import { Table } from '../../components/Table/Table'; // ✅ ADD TABLE COMPONENT
-import { Label } from '../../components/Label/Label'; // ✅ ADD LABEL COMPONENT
-
+import { Table } from '../../components/Table/Table';
+import { Label } from '../../components/Label/Label';
 import {
   BookOpen,
   Code2,

@@ -109,6 +109,7 @@ section {
 
 .name-gradient {
   background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -161,9 +162,6 @@ section {
   align-items: stretch;
 }
 
-/* --------------------------------------------------------
-   CARDS (smaller, tighter, cleaner)
---------------------------------------------------------- */
 .about-card,
 .content-card {
   background: rgba(255, 255, 255, 0.05);
@@ -189,6 +187,7 @@ section {
   font-size: 1.8rem;
   margin-bottom: 0.4rem;
   background: linear-gradient(135deg, #c084fc, #f472b6);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -213,7 +212,7 @@ section {
 }
 
 .info-item:last-child {
-  padding-bottom: 0; /* Remove bottom padding */
+  padding-bottom: 0;
   border-bottom: none;
 }
 .info-icon {
@@ -222,7 +221,6 @@ section {
   margin-bottom: 10px;
 }
 
-/* Force small icons for About sidebar — strongest override possible */
 .about-sidebar .info-item .info-icon,
 .about-sidebar .info-item svg {
   width: 16px !important;
@@ -272,10 +270,6 @@ section {
   padding-bottom: 0.6rem !important;
   margin-bottom: 0.6rem !important;
 }
-
-/* --------------------------------------------------------
-   RESPONSIVENESS
---------------------------------------------------------- */
 
 @media (max-width: 1024px) {
   .about-grid {

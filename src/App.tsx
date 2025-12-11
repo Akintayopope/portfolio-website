@@ -3,7 +3,6 @@ import './index.css';
 
 import Navbar from './layout/Navbar/Navbar';
 
-// Import React Router
 import { Routes, Route } from 'react-router';
 
 // Import your new pages

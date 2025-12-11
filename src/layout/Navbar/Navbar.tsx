@@ -2,7 +2,7 @@ import './Navbar.css';
 
 import { Heading } from '../../components/Heading/Heading';
 import { Button } from '../../components/Button/Button';
-import { Dropdown } from '../../components/Dropdown/Dropdown'; // <-- YOU MUST USE THIS
+import { Dropdown } from '../../components/Dropdown/Dropdown';
 import { NavLink } from '../../components/NavLink/NavLink';
 import { navLinks } from '../../data/navLinks';
 

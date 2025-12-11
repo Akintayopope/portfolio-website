@@ -23,11 +23,11 @@ export const Image: React.FC<ImageProps> = ({
   height = 'auto',
   rounded = false,
   disabled = false,
-  className, // ✅ accept it
+  className,
 }) => {
   return (
     <StyledImg
-      className={className} // ✅ pass it down
+      className={className}
       src={src}
       alt={alt}
       $width={width}
